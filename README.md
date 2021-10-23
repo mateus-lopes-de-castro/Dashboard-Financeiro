@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img alt="dashboard-financeiro" title="Dashboard Financeiro" src="https://user-images.githubusercontent.com/77696623/138017474-23d5b092-9956-4027-a9a1-58c176ef9408.PNG" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
 
-## Available Scripts
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## 🚀 Tecnologias
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- HTML
+- CSS
+- TypeScript
+- Styled Components
+- React
 
-### `npm test`
+## 💻 Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O dashboard financeiro é uma aplicação onde você registrar todas suas entradas e saídas financeiras atuais e previstas. Tambem contem um dashboard para apresentar seu desempenho financeiro de uma forma muito amigável e intuitiva.
 
-### `npm run build`
+## Como utilizar?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Baixe esse repositório e com o seu o terminal, entre no diretório
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Abra um terminal e copie este repositório com o comando `git clone https://github.com/mateus-lopes-de-castro/dashboard-financeiro.git`
+2. Entre na pasta dashboard-financeiro
+3. Rode o comando `npm install` para instalar as dependências.
+4. E pra iniciar a aplicação, rode o comando `npm run start` e acesse o endereço http://localhost:3000 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔖 Layout
 
-### `npm run eject`
+![logo](https://user-images.githubusercontent.com/77696623/138017958-29bdf96b-f9cb-47c7-9b8e-82907b261883.PNG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Capturar](https://user-images.githubusercontent.com/77696623/138373209-c35cb9df-f519-497b-baa5-a243d76cc569.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
