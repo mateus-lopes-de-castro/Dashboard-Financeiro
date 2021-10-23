@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="dashboard-financeiro" title="Dashboard Financeiro" src="https://user-images.githubusercontent.com/77696623/138017474-23d5b092-9956-4027-a9a1-58c176ef9408.PNG" />
+  <img alt="dashboard-financeiro" title="Dashboard Financeiro" src="" />
 </h1>
 
 <p align="center">
@@ -38,7 +38,4 @@ Baixe esse repositório e com o seu o terminal, entre no diretório
 
 ## 🔖 Layout
 
-![logo](https://user-images.githubusercontent.com/77696623/138017958-29bdf96b-f9cb-47c7-9b8e-82907b261883.PNG)
-
-![Capturar](https://user-images.githubusercontent.com/77696623/138373209-c35cb9df-f519-497b-baa5-a243d76cc569.PNG)
 
