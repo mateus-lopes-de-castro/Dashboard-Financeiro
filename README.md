@@ -20,6 +20,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - TypeScript
 - Styled Components
 - React
+- React Switch
+- React Icons
 
 ## 💻 Projeto
 
