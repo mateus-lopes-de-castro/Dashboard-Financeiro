@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const Content: React.FC = ({children}) =>{
+const ContentHeader: React.FC = () =>{
     return (
         <Container>
-        {children}
+            <h1>Content Header</h1>
         </Container>
     )
 }
 
-export default Content;
+export default ContentHeader;
