@@ -6,15 +6,26 @@ import {
     Controllers
 } from './styles';
 
-const ContentHeader: React.FC = () => {
+interface IContentHeaderProps {
+    title: string;
+    lineColor: string;
+    children: React.ReactNode
+}
+
+const ContentHeader: React.FC<IContentHeaderProps> = ({
+    title,
+    lineColor,
+    children
+}) => {
+
+   
     return (
         <Container>
-            <TitleContainer>
-                <h1>Titulo</h1>
+            <TitleContainer lineColor={lineColor}>
+                <h1>{title}</h1>
             </TitleContainer>
             <Controllers>
-                <button type="button">Botão a</button>
-                <button type="button">Botão b</button>
+                {children}
             </Controllers>
         </Container>
     )
