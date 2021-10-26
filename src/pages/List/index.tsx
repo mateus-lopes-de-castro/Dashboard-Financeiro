@@ -1,7 +1,8 @@
 import React from 'react';
 import ContentHeader from '../../components/ContentHeader';
+import HistoryFinanceCard from '../../components/HistoryFinanceCard';
 import SelectInput from '../../components/SelectInput';
-import { Container } from './styles';
+import { Container, Content } from './styles';
 
 const List: React.FC = () => {
     const options = [
@@ -15,6 +16,87 @@ const List: React.FC = () => {
             <ContentHeader title="Entradas" lineColor="#fff">
                 <SelectInput options={options} />
             </ContentHeader>
+            <Content>
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+
+                <HistoryFinanceCard
+                    cardColor={'#313862'}
+                    tagColor={'#E44C4E'}
+                    title={'Conta de Luz'}
+                    subtitle={'Janeiro 2020'}
+                    amount={'R$ 123,32'}
+                />
+            </Content>
         </Container>
     )
 }
