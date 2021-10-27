@@ -21,7 +21,7 @@ interface IRouteParams {
 }
 
 interface IData {
-    id: number,
+    id: string,
     description: string,
     amountFormatted: string,
     frequency: string,
@@ -48,6 +48,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     }, [])
 
     const months = [
+        { value: 5, label: 'Maio' },
+        { value: 6, label: 'Junho' },
         { value: 7, label: 'Julho' },
         { value: 8, label: 'Agosto' },
         { value: 9, label: 'Setembro' },
@@ -63,18 +65,27 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     ]
 
     useEffect(() => {
-        const response = listData.map(item => {
+        
+        const filteredData = listData.filter(item => {
+            const date = new Date(item.date);
+            const month = String(date.getMonth() + 1);
+            const year = String(date.getFullYear());
+
+            return month === monthSelected && year === yearSelected;
+        });
+    
+        const formattedData = filteredData.map(item =>{
             return {
-                id: Math.random() * listData.length,
+                id: String(new Date().getTime()) + item.amount,
                 description: item.description,
                 amountFormatted: formatCurrency(item.amount),
                 frequency: item.frequency,
                 dataFormatted: formatDate(item.date),
                 tagColor: item.frequency === 'eventual' ? '#4E41F0' : '#E44C4E'
             }
-        })
-        setData(response);
-    }, [])
+        });
+        setData(formattedData);
+    }, [listData, monthSelected, yearSelected])
 
     return (
         <Container>

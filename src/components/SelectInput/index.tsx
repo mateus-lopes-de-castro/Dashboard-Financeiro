@@ -11,7 +11,10 @@ interface ISelectInputProps {
     defaultValue?: string | number;
 }
 
-const SelectInput: React.FC<ISelectInputProps> = ({ options, onChange, defaultValue }) => {
+const SelectInput: React.FC<ISelectInputProps> = ({
+    options,
+    onChange,
+    defaultValue }) => {
     return (
         <Container>
             <select onChange={onChange} defaultValue={defaultValue}>
