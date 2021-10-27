@@ -23,6 +23,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React
 - React Switch
 - React Icons
+- React Router Dom
 
 ## 💻 Projeto
 

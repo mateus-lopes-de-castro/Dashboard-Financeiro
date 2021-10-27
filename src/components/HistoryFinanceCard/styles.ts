@@ -4,7 +4,7 @@ interface ITagProps{
     color: string;
 }
 
-export const Container = styled.li`
+export const Container = styled.div`
     background-color: ${props => props.theme.colors.tertiary};
     list-style: none;
     border-radius: 5px;
