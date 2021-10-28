@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useEffect } from 'react';
+import {uuid} from 'uuidv4'
 
 import ContentHeader from '../../components/ContentHeader';
 import HistoryFinanceCard from '../../components/HistoryFinanceCard';
@@ -9,6 +10,7 @@ import gains from '../../repositories/gains';
 
 import formatCurrency from '../../utils/formatCurrency';
 import formatDate from '../../utils/formatDate';
+import listOfMonths from '../../utils/months';
 
 import { Container, Content, Filters } from './styles';
 
@@ -47,22 +49,33 @@ const List: React.FC<IRouteParams> = ({ match }) => {
         return type === 'entry-balance' ? gains : expenses
     }, [])
 
-    const months = [
-        { value: 5, label: 'Maio' },
-        { value: 6, label: 'Junho' },
-        { value: 7, label: 'Julho' },
-        { value: 8, label: 'Agosto' },
-        { value: 9, label: 'Setembro' },
-        { value: 10, label: 'Outubro' },
-        { value: 11, label: 'Novembro' }
-    ]
+    const months = useMemo(() =>{
+        return listOfMonths.map((month, index) => {
+            return {
+                value: index +1,
+                label: month
+            }
+        })
+    },[])
 
-    const years = [
-        { value: 2020, label: 2020 },
-        { value: 2019, label: 2019 },
-        { value: 2018, label: 2018 },
-        { value: 2021, label: 2021 }
-    ]
+    const years = useMemo(() =>{
+        let uniqueYears: number[] = [];
+        listData.forEach(item => {
+            const date = new Date(item.date);
+            const year = date.getFullYear();
+
+            if(!uniqueYears.includes(year)){
+                uniqueYears.push(year);
+            }
+        });
+
+        return uniqueYears.map(year =>{
+            return {
+                value: year,
+                label: year
+            }
+        })
+    },[listData])
 
     useEffect(() => {
         
@@ -76,7 +89,7 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     
         const formattedData = filteredData.map(item =>{
             return {
-                id: String(new Date().getTime()) + item.amount,
+                id: uuid(),
                 description: item.description,
                 amountFormatted: formatCurrency(item.amount),
                 frequency: item.frequency,
