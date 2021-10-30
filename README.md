@@ -25,6 +25,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React Icons
 - React Router Dom
 - uuidv4
+- React CountUp
 
 ## 💻 Projeto
 
