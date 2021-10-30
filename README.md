@@ -26,6 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React Router Dom
 - uuidv4
 - React CountUp
+- Recharts
 
 ## 💻 Projeto
 
