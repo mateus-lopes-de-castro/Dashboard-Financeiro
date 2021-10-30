@@ -4,7 +4,7 @@ import ContentHeader from '../../components/ContentHeader';
 import SelectInput from '../../components/SelectInput';
 import WalletBox from '../../components/WalletBox';
 import MessageBox from '../../components/MessageBox';
-import PieChart from '../../components/PieCharts';
+import PieChartBox from '../../components/PieChartBox';
 
 import expenses from '../../repositories/expenses';
 import gains from '../../repositories/gains';
@@ -107,6 +107,21 @@ const Dashboard: React.FC = () => {
 
     },[totalBalance])
 
+    const relationExpensesVersusGains = useMemo(() => {
+        const total = totalGains + totalExpenses;
+        
+        const gainsPercent = (totalGains / total) * 100;
+        const expensesPercent = (totalExpenses / total) * 100;
+
+        const data = [
+            {name: "Entradas", value: totalGains, percent: Number(gainsPercent.toFixed(1)), color: '#F7931B' },
+            {name: "Saídas", value: totalExpenses, percent: Number(expensesPercent.toFixed(1)), color: '#E44C4E'},
+        ];
+
+        return data;
+
+    },[totalGains,totalExpenses])
+
     const handleMonthSelected = (month: string) => {
         setMonthSelected(Number(month));
     }
@@ -155,7 +170,7 @@ const Dashboard: React.FC = () => {
                     footerText={message.footerText}
                     icon={message.icon} />
 
-                <PieChart/>
+                <PieChartBox data={relationExpensesVersusGains}/>
             </Content>
         </Container>
     )
