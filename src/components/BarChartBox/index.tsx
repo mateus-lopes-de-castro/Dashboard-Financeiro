@@ -6,13 +6,13 @@ import {
     Bar,
     Cell,
     Tooltip
-    } from 'recharts';
+} from 'recharts';
 
 import formatCurrency from '../../utils/formatCurrency';
 
 import { Container, SideLeft, SideRight, LegendContainer, Legend } from './styles';
 
-interface IBarChartProps{
+interface IBarChartProps {
     title: string;
     data: {
         name: string;
@@ -22,36 +22,39 @@ interface IBarChartProps{
     }[]
 }
 
-const BarChartBox: React.FC<IBarChartProps> = ({title, data}) =>{
+const BarChartBox: React.FC<IBarChartProps> = ({ title, data }) => {
     return (
         <Container>
             <SideLeft>
                 <h2>{title}</h2>
                 <LegendContainer>
-                {
-                    data.map((indicator) => (
-                        <Legend
-                            key={indicator.name}
-                            color={indicator.color}>
-                            <div>{indicator.percent}%</div>
-                            <span>{indicator.name}</span>
-                        </Legend>
-                    ))
-                }
-            </LegendContainer>
+                    {
+                        data.map((indicator) => (
+                            <Legend
+                                key={indicator.name}
+                                color={indicator.color}>
+                                <div>{indicator.percent}%</div>
+                                <span>{indicator.name}</span>
+                            </Legend>
+                        ))
+                    }
+                </LegendContainer>
             </SideLeft>
 
             <SideRight>
                 <ResponsiveContainer>
                     <BarChart data={data}>
-                        <Tooltip formatter={(value:string) => formatCurrency(Number(value))} />
-                        <Bar dataKey="amount">
+                        <Tooltip
+                            formatter={(value: string) => formatCurrency(Number(value))}
+                            cursor={{fill: 'none'}}
+                        />
+                        <Bar dataKey="amount" name="Valor">
                             {
                                 data.map((indicator) => (
                                     <Cell
-                                     key={indicator.name}
-                                     fill={indicator.color}
-                                     cursor="pointer"
+                                        key={indicator.name}
+                                        fill={indicator.color}
+                                        cursor="pointer"
                                     />
                                 ))
                             }
