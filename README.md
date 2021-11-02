@@ -43,4 +43,16 @@ Baixe esse repositório e com o seu o terminal, entre no diretório
 
 ## 🔖 Layout
 
+![login-dark](https://user-images.githubusercontent.com/77696623/139934976-22fefacd-e139-42d6-a479-0776a5934a5b.png)
 
+
+![login-light](https://user-images.githubusercontent.com/77696623/139935178-dc1919cb-63e0-47a9-bb63-b2acd105da6b.png)
+
+![painel-dark](https://user-images.githubusercontent.com/77696623/139935227-c780ccd8-f0ef-4753-a067-631f17d548d5.png)
+
+![painel-light](https://user-images.githubusercontent.com/77696623/139935271-b6179d79-b16c-4e02-9857-df703afc999b.png)
+![painel2-dark](https://user-images.githubusercontent.com/77696623/139935315-829604c2-1e3e-404e-a6a7-99fb63f182a1.png)
+
+![painel3-dark](https://user-images.githubusercontent.com/77696623/139935375-8347dcc9-8920-4559-aa57-a75fc45d2cc0.png)
+
+![moviments](https://user-images.githubusercontent.com/77696623/139935408-011b4a82-497f-4cb5-b7bd-16ee50698190.png)
