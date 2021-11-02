@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Container, ToggleLabel, ToggleSelector } from './styles';
 
