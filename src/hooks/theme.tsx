@@ -39,9 +39,11 @@ const ThemeProvider: React.FC = ({ children }) => {
         }
     };
 
-    return <ThemeContext.Provider value={{ toggleTheme, theme }}>
-        {children}
-    </ThemeContext.Provider>
+    return (
+        <ThemeContext.Provider value={{ toggleTheme, theme }}>
+            {children}
+        </ThemeContext.Provider>
+    )
 };
 
 function useTheme(): IThemeContext {
@@ -50,4 +52,4 @@ function useTheme(): IThemeContext {
     return context;
 }
 
-export { ThemeProvider, useTheme};
+export { ThemeProvider, useTheme };
