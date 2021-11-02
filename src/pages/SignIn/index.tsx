@@ -1,10 +1,13 @@
 import React from 'react';
 
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+
 import logoImg from '../../assets/logo.svg';
 
 import { Container, Logo, Form, FormTitle } from './styles';
 
-const SignIn: React.FC = () =>{
+const SignIn: React.FC = () => {
     return (
         <Container>
             <Logo>
@@ -12,12 +15,24 @@ const SignIn: React.FC = () =>{
                 <h2>Dashboard Financeiro</h2>
             </Logo>
 
-            <Form>
+            <Form onSubmit={() => { }}>
                 <FormTitle>Entrar</FormTitle>
-                <input type="text"></input>
-                <input type="text"></input>
+                <Input
+                    type="email"
+                    required
+                    placeholder="e-mail"
+                />
+                <Input
+                    required
+                    type="password"
+                    placeholder="senha"
+                />
 
-                <button type="submit">Acessar</button>
+                <Button
+                    type="submit"
+                >
+                    Acessar
+                </Button>
             </Form>
         </Container>
     )
