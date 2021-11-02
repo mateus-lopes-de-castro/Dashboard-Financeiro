@@ -30,7 +30,7 @@ const ThemeContext = createContext<IThemeContext>({} as IThemeContext);
 
 const ThemeProvider: React.FC = ({ children }) => {
     const [theme, setTheme] = useState<ITheme>(() => {
-        const themeSaved = localStorage.getItem('@dashboard_financas:theme');
+        const themeSaved = localStorage.getItem('@dashboard-financeiro:theme');
         if(themeSaved){
             return JSON.parse(themeSaved);
         }else{
@@ -41,10 +41,10 @@ const ThemeProvider: React.FC = ({ children }) => {
     const toggleTheme = () => {
         if (theme.title === 'dark') {
             setTheme(light);
-            localStorage.setItem('@dashboard_financas:theme', JSON.stringify(light));
+            localStorage.setItem('@dashboard-financeiro:theme', JSON.stringify(light));
         } else {
             setTheme(dark);
-            localStorage.setItem('@dashboard_financas:theme', JSON.stringify(dark));
+            localStorage.setItem('@dashboard-financeiro:theme', JSON.stringify(dark));
         }
     };
 
